@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +6,15 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Updated to use Google Fonts */
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
 }
 
+/* Navbar Styles */
 .navbar {
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Dark blue */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -27,38 +29,71 @@ body {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Updated font */
 }
 
 .nav-links {
+    display: flex; /* Default for desktop */
     list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 2rem;
+    gap: 20px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #3498db;
+.nav-links a:hover {
+    color: #1ABC9C; /* Teal accent on hover */
 }
 
-.nav-toggle {
-    display: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+.nav-links.active {
+    display: block; /* Show when active on mobile */
 }
 
+/* Hamburger Menu for Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden on mobile until toggled */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50; /* Match navbar background */
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: block; /* Show when toggled */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+}
+
+/* Hide Hamburger on Desktop */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
+/* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?engineering');
+    background: linear-gradient(to right, #2C3E50, #1ABC9C); /* Gradient background */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -67,6 +102,7 @@ body {
     text-align: center;
     color: white;
 }
+
 .profile-pic {
     width: 150px; /* Adjust size as needed */
     height: 150px;
@@ -74,12 +110,13 @@ body {
     object-fit: cover; /* Ensures the image scales nicely */
     margin: 0 auto 20px; /* Centers the image and adds spacing below */
     display: block; /* Ensures proper centering */
-    border: 3px solid #2C3E50; /* Adds a subtle border (dark blue) */
+    border: 3px solid #2C3E50; /* Dark blue border */
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Updated font */
 }
 
 .hero-content p {
@@ -90,44 +127,96 @@ body {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #3498db;
+    background-color: #1ABC9C; /* Teal */
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: #16a085; /* Darker teal on hover */
 }
 
-.content {
+/* Goals Section */
+.goals {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
+}
+
+.container {
     max-width: 800px;
-    margin: 100px auto 2rem;
-    padding: 0 1rem;
+    margin: 0 auto;
 }
 
-.section {
-    margin-bottom: 2rem;
+.goals h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2C3E50; /* Dark blue */
+    font-family: 'Montserrat', sans-serif;
 }
 
-.section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
+.goals ul {
+    list-style: none;
+    padding: 0;
 }
 
-.section p, .section ul {
+.goals li {
+    margin: 15px 0;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-.section ul {
-    list-style: disc;
-    margin-left: 2rem;
+.goals strong {
+    color: #1ABC9C; /* Teal accent */
 }
 
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2C3E50;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2C3E50;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skill-item p {
+    font-size: 1.5rem;
+    color: #1ABC9C;
+}
+
+/* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: #2C3E50;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -136,30 +225,22 @@ footer {
     width: 100%;
 }
 
+footer p {
+    margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #2c3e50;
-        padding: 1rem 0;
     }
 
     .nav-links.active {
-        display: flex;
+        display: block; /* Ensure this works for mobile */
     }
 
     .nav-links li {
         margin: 0.5rem 0;
-        text-align: center;
-    }
-
-    .nav-toggle {
-        display: block;
     }
 
     .hero-content h1 {
@@ -168,5 +249,10 @@ footer {
 
     .hero-content p {
         font-size: 1.2rem;
+    }
+
+    .profile-pic {
+        width: 120px; /* Smaller image on mobile */
+        height: 120px;
     }
 }
