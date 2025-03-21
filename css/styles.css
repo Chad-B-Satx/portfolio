@@ -67,6 +67,15 @@ body {
     text-align: center;
     color: white;
 }
+.profile-pic {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image scales nicely */
+    margin: 0 auto 20px; /* Centers the image and adds spacing below */
+    display: block; /* Ensures proper centering */
+    border: 3px solid #2C3E50; /* Adds a subtle border (dark blue) */
+}
 
 .hero-content h1 {
     font-size: 3rem;
