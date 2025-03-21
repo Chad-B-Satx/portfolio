@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Updated to use Google Fonts */
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
@@ -14,7 +14,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2c3e50; /* Dark blue */
+    background-color: #2c3e50;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -29,11 +29,11 @@ body {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif; /* Updated font */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-links {
-    display: flex; /* Default for desktop */
+    display: flex;
     list-style: none;
     gap: 20px;
 }
@@ -46,28 +46,33 @@ body {
 }
 
 .nav-links a:hover {
-    color: #1ABC9C; /* Teal accent on hover */
+    color: #1ABC9C;
+}
+
+.nav-links a.active {
+    color: #1ABC9C;
+    font-weight: 600;
 }
 
 .nav-links.active {
-    display: block; /* Show when active on mobile */
+    display: block;
 }
 
 /* Hamburger Menu for Mobile */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hidden on mobile until toggled */
+        display: none;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 60px;
         left: 0;
         width: 100%;
-        background-color: #2c3e50; /* Match navbar background */
+        background-color: #2c3e50;
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        display: block; /* Show when toggled */
+        display: block;
     }
 
     .nav-links li {
@@ -76,7 +81,7 @@ body {
     }
 
     .nav-toggle {
-        display: block; /* Show hamburger on mobile */
+        display: block;
         cursor: pointer;
         font-size: 24px;
         color: white;
@@ -86,14 +91,14 @@ body {
 /* Hide Hamburger on Desktop */
 @media (min-width: 769px) {
     .nav-toggle {
-        display: none; /* Hide hamburger on desktop */
+        display: none;
     }
 }
 
-/* Hero Section */
+/* Hero Section (for index.html) */
 .hero {
     height: 100vh;
-    background: linear-gradient(to right, #2C3E50, #1ABC9C); /* Gradient background */
+    background: linear-gradient(to right, #2C3E50, #1ABC9C);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -104,19 +109,19 @@ body {
 }
 
 .profile-pic {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image scales nicely */
-    margin: 0 auto 20px; /* Centers the image and adds spacing below */
-    display: block; /* Ensures proper centering */
-    border: 3px solid #2C3E50; /* Dark blue border */
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid #2C3E50;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif; /* Updated font */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hero-content p {
@@ -124,10 +129,30 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Experience Hero Section (for experience.html) */
+.experience-hero {
+    padding: 120px 20px 60px;
+    background: linear-gradient(to right, #2C3E50, #1ABC9C);
+    text-align: center;
+    color: white;
+}
+
+.experience-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.experience-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Button Styles */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #1ABC9C; /* Teal */
+    background-color: #1ABC9C;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -135,13 +160,13 @@ body {
 }
 
 .btn:hover {
-    background-color: #16a085; /* Darker teal on hover */
+    background-color: #16a085;
 }
 
-/* Goals Section */
+/* Goals Section (for index.html) */
 .goals {
     padding: 50px 20px;
-    background-color: #f9f9f9; /* Light gray background */
+    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -153,7 +178,7 @@ body {
 .goals h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #2C3E50; /* Dark blue */
+    color: #2C3E50;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -169,10 +194,10 @@ body {
 }
 
 .goals strong {
-    color: #1ABC9C; /* Teal accent */
+    color: #1ABC9C;
 }
 
-/* Skills Section */
+/* Skills Section (for index.html) */
 .skills {
     padding: 50px 20px;
     background-color: #fff;
@@ -214,6 +239,93 @@ body {
     color: #1ABC9C;
 }
 
+/* Experience Content (for experience.html) */
+.experience-content {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.experience-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2C3E50;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #1ABC9C;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+
+.experience-entry {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: #1ABC9C;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #1ABC9C;
+}
+
+.experience-details h2 {
+    font-size: 1.5rem;
+    color: #2C3E50;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.experience-details h2 span {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.experience-details ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.experience-details li {
+    margin-bottom: 8px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
 /* Footer */
 footer {
     background-color: #2C3E50;
@@ -236,23 +348,42 @@ footer p {
     }
 
     .nav-links.active {
-        display: block; /* Ensure this works for mobile */
+        display: block;
     }
 
     .nav-links li {
         margin: 0.5rem 0;
     }
 
-    .hero-content h1 {
+    .experience-hero h1 {
         font-size: 2rem;
     }
 
-    .hero-content p {
-        font-size: 1.2rem;
+    .experience-hero p {
+        font-size: 1rem;
     }
 
-    .profile-pic {
-        width: 120px; /* Smaller image on mobile */
-        height: 120px;
+    .experience-details h2 {
+        font-size: 1.3rem;
+    }
+
+    .experience-details h2 span {
+        font-size: 1rem;
+    }
+
+    .experience-details ul {
+        font-size: 0.9rem;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-dot {
+        left: 8px;
+    }
+
+    .experience-entry {
+        padding-left: 40px;
     }
 }
