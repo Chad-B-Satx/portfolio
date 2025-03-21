@@ -167,6 +167,25 @@ body {
     opacity: 0.9;
 }
 
+/* About Hero Section (for About.html) */
+.about-hero {
+    padding: 120px 20px 60px;
+    background: linear-gradient(to right, #2C3E50, #1ABC9C);
+    text-align: center;
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
 /* Button Styles */
 .btn {
     display: inline-block;
@@ -330,7 +349,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* CTA Section (for Experience.html) */
+/* CTA Section (for Experience.html and About.html) */
 .cta-section {
     text-align: center;
     padding: 40px 20px;
@@ -395,6 +414,44 @@ body {
     color: #16a085;
 }
 
+/* About Content (for About.html) */
+.about-content {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.about-content .section {
+    margin-bottom: 40px;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: #2C3E50;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+}
+
+.about-content strong {
+    color: #1ABC9C;
+}
+
 /* Footer */
 footer {
     background-color: #2C3E50;
@@ -438,12 +495,14 @@ footer p {
     }
 
     .experience-hero h1,
-    .contact-hero h1 {
+    .contact-hero h1,
+    .about-hero h1 {
         font-size: 2rem;
     }
 
     .experience-hero p,
-    .contact-hero p {
+    .contact-hero p,
+    .about-hero p {
         font-size: 1rem;
     }
 
@@ -478,5 +537,14 @@ footer p {
     .contact-item {
         width: 100%;
         max-width: 300px;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p,
+    .about-content ul {
+        font-size: 0.9rem;
     }
 }
